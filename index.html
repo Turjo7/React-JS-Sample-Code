@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>React getting started</title>
+  </head>
+  <body>
+    <!-- Root container for react components -->
+    <div id='root'></div>
+ 
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
+
+    <script type="text/babel">
+      /*class HelloWorld extends React.Component {
+        // Implement render method
+        render(){
+          return <div><h1>Hello World This Is Turjo</h1></div>
+        }
+      }*/
+     /* function HelloWorld() {
+        return <div><h1>Hello World This Is Turjo</h1></div>
+      }*/
+      // {} means JSX
+      // .render returns only one component
+      // <div></div> used to treat to hello world as one
+      class HelloWorld extends React.Component {
+        // Implement render method
+       /* render(){
+          const name="Turjo"
+          return <div>Hello {this.props.firstname}</div>
+        }*/
+      /*  constructor(props){
+          super(props);
+          this.state={date:new Date(),firstname:"Turjo"};
+
+        }*/
+        buttonClicked=(event)=>{
+          alert("Hello");
+
+        }
+
+
+        render(){
+          
+          return <div><button onClick={this.buttonClicked}>Click Me</button></div>
+        }
+      }
+
+      //ReactDOM.render(<div><HelloWorld firstname="Turjo86"/><HelloWorld firstname="Web Programmer"/></div>, document.getElementById('root'));
+      ReactDOM.render(<HelloWorld />, document.getElementById('root'));
+    </script>
+  </body>
+</html>
